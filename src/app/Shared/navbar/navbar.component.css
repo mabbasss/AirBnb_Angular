@@ -1,17 +1,11 @@
 :host ::ng-deep .p-password input {
   width: 15rem
 }
-<<<<<<< Updated upstream
 
-=======
-<<<<<<< Updated upstream
 a{
-  text-decoration: underline;
   cursor: pointer;
 }
-a{
-  color: white;
-=======
+
 /*===== NAVBAR =====*/
 .header_navbar {
   position: absolute;
