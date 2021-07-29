@@ -1,0 +1,119 @@
+<!--
+<div class="container-fluid mt-5 pt-5 mb-5">
+  <div class="row justify-content-center">
+     <div class="col-md-6 col-lg-4 col-xl-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center m-auto">
+                   <h4 class="text-uppercase text-center">CREATE ACCOUNT</h4>
+                </div>
+                <form [formGroup]="formcontrol" (ngSubmit)="Save()" >
+                   <input type="hidden" name="csrftoken" >
+                   <div class="form-group mb-3">
+                      <label for="fname">User Name </label>
+                      <input type="text" name="fname"  [(ngModel)]="register.UserName"  formControlName="UserName"  placeholder="UserName" class="form-control" required="">
+                      <div class="text-danger" *ngIf="!this.formcontrol.get('UserName').valid && this.formcontrol.get('UserName').touched"> requird </div>
+                   </div>
+                   <div class="form-group mb-3">
+                    <label for="emailaddress">Email address </label>
+                    <input type="email" name="email"  [(ngModel)]="register.Email"  formControlName="Email"  placeholder="Enter Email" class="form-control" required="">
+                       <div class="text-danger" *ngIf="!this.formcontrol.get('Email').valid && this.formcontrol.get('Email').touched"> requird </div>
+
+                 </div>
+
+                   <div class="form-group mb-3">
+                      <label for="fname"> FullName</label>
+                      <input type="text" name="lname" [(ngModel)]="register.FullName"    formControlName="FullName"  placeholder="Last Name" class="form-control" required="">
+                         <div class="text-danger" *ngIf="!this.formcontrol.get('FullName').valid && this.formcontrol.get('FullName').touched"> requird </div>
+
+                   </div>
+
+                   <div class="form-group mb-3">
+                      <label for="password">PASSWORD</label>
+
+                         <input type="password" class="form-control"  [(ngModel)]="register.Password"  formControlName="Password"  name="password" placeholder="Enter Password" required="">
+                         <div class="text-danger" *ngIf="!this.formcontrol.get('Password').valid && this.formcontrol.get('Password').touched"> 6 or more characters && a lower-case letter &&
+                          an upper-case letter </div>
+
+
+
+                   </div>
+
+                   <div class="form-group mb-0 d-flex justify-content-between">
+                      <button class="btn btn-dark btn-block w-50 mx-auto" type="submit" [disabled]="!formcontrol.valid"  name="submit" >Sign Up </button>
+
+                   </div>
+
+                </form>
+             </div>
+        </div>
+     </div>
+  </div>
+</div>
+
+ -->
+
+
+
+
+
+
+
+
+<!-- <div class="container-fluid mt-5 pt-5 mb-5">
+  <div class="row justify-content-center">
+     <div class="col-md-6 col-lg-4 col-xl-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center m-auto">
+                   <h4 class="text-uppercase text-center">CREATE ACCOUNT</h4>
+                </div>
+                <form [formGroup]="serves.formModel" autocomplete="off" (ngSubmit)="Save()">
+                  <div class="form-group required">
+                    <label>Username</label>
+                    <input class="form-control" formControlName="UserName">
+                    <label class="text-danger" *ngIf="serves.formModel.get('UserName').touched && serves.formModel.get('UserName').errors?.required">This field is mandatory.</label>
+                  </div>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input class="form-control" formControlName="Email">
+                    <label class="text-danger" *ngIf="serves.formModel.get('Email').touched && serves.formModel.get('Email').errors">Invalid email address.</label>
+
+                  </div>
+                  <div class="form-group">
+                    <label>Full Name</label>
+                    <input class="form-control" formControlName="FullName">
+                    <div class="text-danger" *ngIf="serves.formModel.get('FullName').touched && serves.formModel.get('FullName').errors"> requird </div>
+
+                  </div>
+                  <div formGroupName="Passwords">
+                    <div class="form-group required">
+                      <label>Password</label>
+                      <input type="password" class="form-control" formControlName="Password">
+                      <label class="text-danger" *ngIf="serves.formModel.get('Passwords.Password').touched && serves.formModel.get('Passwords.Password').errors?.required">This field is mandatory.</label>
+                      <label class="text-danger" *ngIf="serves.formModel.get('Passwords.Password').touched && serves.formModel.get('Passwords.Password').errors?.minlength">Minimum 4 characters required.</label>
+                    </div>
+                    <div class="form-group required">
+                      <label>Confirm Password</label>
+                      <input type="password" class="form-control" formControlName="ConfirmPassword">
+                      <label class="text-danger" *ngIf="serves.formModel.get('Passwords.ConfirmPassword').touched && serves.formModel.get('Passwords.ConfirmPassword').errors?.required">This field is mandatory.</label>
+                      <label class="text-danger" *ngIf="serves.formModel.get('Passwords.ConfirmPassword').touched && serves.formModel.get('Passwords.ConfirmPassword').errors?.passwordMismatch">Confirm Password does not match.</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-8 offset-md-2">
+                      <button type="submit" class="btn btn-dark btn-block w-50 mx-auto" [disabled]="!serves.formModel.valid">Sign Up</button>
+                      <div class="float-end mx-n5">
+                        <p class="muted pt-2 ">Back to <a routerLink="../login" class="theme-secondary-text ">Log In  →</a></p>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </form>
+             </div>
+        </div>
+     </div>
+  </div>
+</div> -->
+

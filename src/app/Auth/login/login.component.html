@@ -1,0 +1,51 @@
+
+<div class="container mt-5 pt-5 mb-5">
+  <div class="row justify-content-center">
+     <div class="col-md-6 col-lg-4 col-xl-4">
+        <div class="card">
+          <form #form='ngForm' autocomplete="off" class="bg-light border p-3" (submit)="onSubmit(form)">
+            <div class="form-row">
+              <h4 class="title my-3">Login For Access</h4>
+              <div class="col-12">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                  </div>
+                  <input type="Email"  class="input form-control" id="username" placeholder="Username" #Email="ngModel" name="Email" [(ngModel)]="formModel.Email" required  aria-label="Username" aria-describedby="basic-addon1" />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                  </div>
+                  <input name="password" [type]="type"  class="input form-control" id="password" placeholder="password" required="true" #Password="ngModel" name="Password" [(ngModel)]="formModel.Password" required aria-label="password" aria-describedby="basic-addon1" />
+                  <div class="input-group-append">
+                    <span class="input-group-text" (click)="password_show_hide()">
+                      <i class="fas fa-eye" id="show_eye"></i>
+                      <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group form-check text-left">
+                  <input type="checkbox" name="remember" class="form-check-input" id="remember_me" />
+                  <label class="form-check-label" for="remember_me">Remember me</label>
+                </div>
+              </div>
+              <div class="col-sm-12 pt-3 text-right">
+                <p>Already  <a routerLink="../register">Register</a></p>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit" name="signin" [disabled]="form.invalid"  >Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+     </div>
+  </div>
+</div>
+
+
+

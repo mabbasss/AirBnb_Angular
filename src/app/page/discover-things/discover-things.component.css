@@ -1,0 +1,9 @@
+#banner {
+  border: transparent 1px white;
+  border-radius: 18px;
+  position: relative;
+  background-image: url(src/assets/images/bg_main.png);
+  background-size: cover;
+
+  background-position: center;
+}

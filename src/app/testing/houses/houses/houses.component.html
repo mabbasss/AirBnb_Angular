@@ -1,0 +1,51 @@
+<div class="container mt-5 pt-5 mb-5">
+  <div class="row justify-content-center">
+     <div class="col-md-6 col-lg-4 col-xl-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center m-auto">
+                   <h4 class="text-uppercase text-center">CREATE ACCOUNT</h4>
+                </div>
+                <form [formGroup]="service.formModeule" autocomplete="off" (ngSubmit)="Save()" >
+
+                   <div class="form-group mb-3">
+                      <label for="fname">HouseCity </label>
+                      <input type="text"  placeholder="HouseCity" formControlName="City" class="form-control" >
+                   </div>
+                   <div class="form-group mb-3">
+                      <label for="fname"> HouseStreet </label>
+                      <input type="text"  placeholder="HouseStreet" formControlName="Street" class="form-control" >
+                   </div>
+                   <div class="form-group mb-3">
+                    <label for="fname"> Title </label>
+                    <input type="text"  placeholder="Title" formControlName="Title" class="form-control" >
+                 </div>
+                   <div class="form-group mb-3">
+                    <label for="fname">HouseCountry </label>
+                    <input type="text"  placeholder="HouseCountry" formControlName="Country" class="form-control" >
+                  </div>
+                  <div class="form-group mb-3">
+                      <label for="fname"> HouseNumber </label>
+                      <input type="text"  placeholder="HouseNumber" formControlName="number" class="form-control" >
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="fname"> HousePrice </label>
+                    <input type="text"  placeholder="HousePrice" formControlName="Price" class="form-control" >
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="fname"> images </label>
+                    <input type="file"  placeholder="HousePrice" formControlName="HousePhotoFiles" #file (change)="service.onFileChange(file.files)" multiple  >
+                  </div>
+                  
+                  <div class="form-group mb-0 d-flex justify-content-between">
+                      <button class="btn btn-dark btn-block" type="submit"  > Add </button>
+                  </div>
+                </form>
+             </div>
+        </div>
+     </div>
+  </div>
+</div>
+

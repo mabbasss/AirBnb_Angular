@@ -1,0 +1,234 @@
+<div id="header_navbar " class="header_navbar d-flex justify-content-center fixed-top  shadow">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" src='../../assets/images/airbnb.svg' routerLink="/home" alt="Logo">
+          </a>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+            <ul id="nav" class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="page-scroll active text-danger" routerLink="/Becomehost">Become a host</a>
+              </li>
+              <li class="nav-item">
+                <a class="page-scroll text-danger" routerLink="/Booking">Booking</a>
+              </li>
+              <li class="nav-item">
+                <a class="page-scroll text-danger" routerLink="/House">Houses</a>
+              </li>
+              <li class="nav-item">
+                <a class="page-scroll text-danger btn " *ngIf="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">register</a>
+              </li>
+              <li class="nav-item">
+                <a class="page-scroll text-danger btn " *ngIf="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="page-scroll text-danger btn " *ngIf="LogOut"  (click)="logout()">LogOut</a>
+              </li>
+              <li class="nav-item">
+                <a class="page-scroll text-danger" routerLink="/home">Contact</a>
+              </li>
+            </ul>
+          </div> <!-- navbar collapse -->
+        </nav> <!-- navbar -->
+      </div>
+    </div> <!-- row -->
+  </div> <!-- container -->
+
+</div> <!-- header navbar -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal Register  -->
+<div class="modal fade " id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CREATE ACCOUNT</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formModel" autocomplete="off" (ngSubmit)="Save()" enctype="multipart/form-data">
+          <div class="form-group required">
+            <label>Fisrtname</label>
+            <input class="form-control" formControlName="PersonFirstName">
+            <label  *ngIf="f.PersonFirstName.touched && f.PersonFirstName.errors?.required  " class="text-danger"  > This field is Required </label>
+
+          </div>
+
+          <div class="form-group required">
+            <label>Lastname</label>
+            <input class="form-control" formControlName="PersonLastName">
+            <label  *ngIf="f.PersonLastName.touched && f.PersonLastName.errors?.required  " class="text-danger"  > This field is Required </label>
+          </div>
+
+
+          <div class="form-group">
+            <label>Email</label>
+            <input class="form-control" formControlName="PersonEmailName">
+
+            <label  *ngIf="f.PersonEmailName.touched && f.PersonEmailName.errors?.required  " class="text-danger"  > Invalid email address. </label>
+
+          </div>
+
+          <div class="form-group">
+            <label>Phone</label>
+            <input class="form-control" formControlName="PersonPhone">
+            <label  *ngIf="f.PersonPhone.touched && f.PersonPhone.errors?.required  " class="text-danger"  > Phone Is Required. </label>
+
+          </div>
+
+          <!-- <p-fileUpload formControlName="file"></p-fileUpload> -->
+
+          <!-- <p-fileUpload mode="basic" formControlName="ProfilePicture" #file (change)="onFileChange(file.files)" accept="image/*"  ></p-fileUpload> -->
+          <input type="file" formControlName="ProfilePicture" #file (change)="onFileChange(file.files)" class="file" accept="image/*" > <br>
+
+
+
+
+          <!-- <div class="form-group row">  
+            <label for="pass" class="col-md-4 col-form-label text-md-right">Password</label>  
+            <div class="col-md-6">  
+                <input type="password" formControlName="password" name="txtPassword"  compare-password="txtConfirmPassword" parent="true" required>  
+                <span class="text-danger" *ngIf="f.password.dirty && f.password.errors && f.password.errors.required">Password is required </span>  
+            </div>  
+        </div>  
+        <div class="form-group row">  
+            <label for="confirm" class="col-md-4 col-form-label text-md-right">Confirm Password</label>  
+            <div class="col-md-6">  
+                <input type="password" ormControlName="confirmPassword" class="form-control" name="txtConfirmPassword"  compare-password="txtPassword" required>   
+                <span class="text-danger" *ngIf="f.confirmPassword.dirty && f.confirmPassword.errors && f.confirmPassword.errors.required">Password is required </span>  
+                <span class="text-danger" *ngIf="f.confirmPassword.dirty && ((f.confirmPassword.errors && f.confirmPassword.errors.compare) || (f.confirmPassword.errors && f.confirmPassword.errors.compare)) && !f.confirmPassword.errors.required">Password Doesn't match</span>  
+            </div>  
+        </div>  
+ -->
+
+
+          <!-- <p-fileUpload name="myfile[]" [(ngModel)]="serves.file" ></p-fileUpload> -->
+          <!-- <div formGroupName="Passwords">
+            <div class="form-group required">
+              <label>Password</label>
+              <input type="password" class="form-control" formControlName="PersonPassword">
+              <label class="text-danger"
+                *ngIf="formModel.controls.touched && formModel.controls.errors">This
+                field is mandatory.</label>
+
+             </div>
+            <div class="form-group required">
+              <label>Confirm Password</label>
+              <input type="password" class="form-control" formControlName="ConfirmPassword">
+               <label class="text-danger"
+                *ngIf="formModel.controls.touched && formModel.controls.errors">This
+                field is mandatory.</label> 
+               <label class="text-danger"
+                *ngIf="formModel.controls.touched  && formModel.controls.errors">Confirm
+                Password does not match.</label> 
+             </div>
+          </div> -->
+          <p-password formControlName="PersonPassword" placeholder="Password"    required minlength="4" > </p-password>
+       
+          <!-- <input type="password"formControlName="PersonPassword"  > -->
+          <div class="form-row">
+            <div class="form-group col-md-8 offset-md-2">
+              <button type="submit" class="btn btn-dark btn-block w-50 mx-auto"
+                [disabled]="!formModel.valid" >Sign Up</button>
+              <div class="float-end mx-n5">
+
+
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <p class="muted pt-2 ">Back to <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-primary">Log In →</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal Login -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Login For Access</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #form='ngForm' autocomplete="off"  (submit)="onSubmit(form)">
+          <div class="form-row">
+            <div class="col-12">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="Email" class="input form-control" id="username" placeholder="Username" #Email="ngModel"
+                  name="Email" [(ngModel)]="formModels.Email" required aria-label="Username"
+                  aria-describedby="basic-addon1" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                </div>
+                <input name="password" [type]="type" class="input form-control" id="password" placeholder="password"
+                  required="true" #Password="ngModel" name="Password" [(ngModel)]="formModels.Password" required
+                  aria-label="password" aria-describedby="basic-addon1" />
+                <div class="input-group-append">
+                  <span class="input-group-text" (click)="password_show_hide()">
+                    <i class="fas fa-eye" id="show_eye"></i>
+                    <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group form-check text-left">
+                <input type="checkbox" name="remember" class="form-check-input" id="remember_me" />
+                <label class="form-check-label" for="remember_me">Remember me</label>
+              </div>
+            </div>
+
+            <div class="col-12 mx-auto">
+              <button class="btn btn-primary mx-auto" type="submit" name="signin" [disabled]="form.invalid">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="col-sm-12 pt-3 text-right">
+          <p>Already <a routerLink="../register">Register</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
