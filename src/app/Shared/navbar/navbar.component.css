@@ -5,17 +5,15 @@
 a{
   cursor: pointer;
 }
-<<<<<<< HEAD
+
 a{
   color: white;
 }
 
-.header_navbar{
-=======
 
 /*===== NAVBAR =====*/
 .header_navbar {
->>>>>>> dded5b3272b41d5931351f258ef8fb5878696c31
+
   position: absolute;
   top: 0;
   left: 0;
