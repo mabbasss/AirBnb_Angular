@@ -41,10 +41,9 @@ export class HouseService {
       return this.formData.append('HousePhotoFiles'+index, file, file.name);
     });
 
+    //
+    // /asljgf;kajsh gk;jaehmeg oakefgvk;jserg
 
-
-
-    // this.formData.append('HousePhotoFiles', files[0]);
   }
 
 
