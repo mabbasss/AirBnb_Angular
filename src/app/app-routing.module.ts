@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:"House",component:HousesComponent},
   {path:"Booking",component:BookingComponent},
   {path:"House/AllHouses/:City",component:AllhousesComponent},
-  {path:"House/AllHouses/:id",component:DetailsComponent},
+  {path:"House/HousesBooking/:id",component:DetailsComponent},
 
 
 ];

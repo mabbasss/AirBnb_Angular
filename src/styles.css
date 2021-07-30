@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
+
 @import  "../node_modules/primeicons/primeicons.css";
 @import  "../node_modules/primeng/resources/themes/saga-blue/theme.css";
 @import  "../node_modules/primeng/resources/primeng.min.css";
@@ -6,10 +8,11 @@
 @import '../node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css';
 @import '../node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css';
 
+*{
+  font-family: inherit;
+}
 
 
-
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
 /* Default */
 /* Deafult Margin & Padding */
 /*-- Margin Top --*/
