@@ -50,7 +50,7 @@
 
 
 <!-- Modal Register  -->
-<div class="modal fade " id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade  " id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered ">
     <div class="modal-content">
       <div class="modal-header">
@@ -96,21 +96,21 @@
 
 
 
-          <!-- <div class="form-group row">  
-            <label for="pass" class="col-md-4 col-form-label text-md-right">Password</label>  
-            <div class="col-md-6">  
-                <input type="password" formControlName="password" name="txtPassword"  compare-password="txtConfirmPassword" parent="true" required>  
-                <span class="text-danger" *ngIf="f.password.dirty && f.password.errors && f.password.errors.required">Password is required </span>  
-            </div>  
-        </div>  
-        <div class="form-group row">  
-            <label for="confirm" class="col-md-4 col-form-label text-md-right">Confirm Password</label>  
-            <div class="col-md-6">  
-                <input type="password" ormControlName="confirmPassword" class="form-control" name="txtConfirmPassword"  compare-password="txtPassword" required>   
-                <span class="text-danger" *ngIf="f.confirmPassword.dirty && f.confirmPassword.errors && f.confirmPassword.errors.required">Password is required </span>  
-                <span class="text-danger" *ngIf="f.confirmPassword.dirty && ((f.confirmPassword.errors && f.confirmPassword.errors.compare) || (f.confirmPassword.errors && f.confirmPassword.errors.compare)) && !f.confirmPassword.errors.required">Password Doesn't match</span>  
-            </div>  
-        </div>  
+          <!-- <div class="form-group row">
+            <label for="pass" class="col-md-4 col-form-label text-md-right">Password</label>
+            <div class="col-md-6">
+                <input type="password" formControlName="password" name="txtPassword"  compare-password="txtConfirmPassword" parent="true" required>
+                <span class="text-danger" *ngIf="f.password.dirty && f.password.errors && f.password.errors.required">Password is required </span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="confirm" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
+            <div class="col-md-6">
+                <input type="password" ormControlName="confirmPassword" class="form-control" name="txtConfirmPassword"  compare-password="txtPassword" required>
+                <span class="text-danger" *ngIf="f.confirmPassword.dirty && f.confirmPassword.errors && f.confirmPassword.errors.required">Password is required </span>
+                <span class="text-danger" *ngIf="f.confirmPassword.dirty && ((f.confirmPassword.errors && f.confirmPassword.errors.compare) || (f.confirmPassword.errors && f.confirmPassword.errors.compare)) && !f.confirmPassword.errors.required">Password Doesn't match</span>
+            </div>
+        </div>
  -->
 
 
@@ -129,14 +129,14 @@
               <input type="password" class="form-control" formControlName="ConfirmPassword">
                <label class="text-danger"
                 *ngIf="formModel.controls.touched && formModel.controls.errors">This
-                field is mandatory.</label> 
+                field is mandatory.</label>
                <label class="text-danger"
                 *ngIf="formModel.controls.touched  && formModel.controls.errors">Confirm
-                Password does not match.</label> 
+                Password does not match.</label>
              </div>
           </div> -->
           <p-password formControlName="PersonPassword" placeholder="Password"    required minlength="4" > </p-password>
-       
+
           <!-- <input type="password"formControlName="PersonPassword"  > -->
           <div class="form-row">
             <div class="form-group col-md-8 offset-md-2">
@@ -157,19 +157,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

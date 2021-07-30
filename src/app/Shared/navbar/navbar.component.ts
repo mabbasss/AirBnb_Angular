@@ -16,11 +16,11 @@ export class NavbarComponent implements OnInit {
   formData = new FormData();
   formModel = new FormGroup({
     PersonFirstName: new FormControl('', [Validators.required,]),
-    PersonLastName: new FormControl('', [Validators.required,]),
+    PersonLastName: new  FormControl('', [Validators.required,]),
     PersonEmailName: new FormControl('', [Validators.required,]),
     PersonPhone: new FormControl('', [Validators.required,]),
-    ProfilePicture: new FormControl('', [Validators.required,]),
-    PersonPassword: new FormControl ('', [Validators.required, Validators.minLength(4)]),
+    ProfilePicture: new  FormControl('', [Validators.required,]),
+    PersonPassword: new  FormControl ('', [Validators.required, Validators.minLength(4)]),
   });
   get f(): { [key: string]: AbstractControl } {
     return this.formModel.controls;
@@ -69,7 +69,7 @@ export class NavbarComponent implements OnInit {
 
 
 
-  //Register 
+  //Register
   Save(){
     this.formData.append('PersonFirstName', this.formModel.controls.PersonFirstName.value);
     this.formData.append('PersonLastName',this.formModel.controls.PersonLastName.value);
@@ -111,7 +111,7 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  //LogOut 
+  //LogOut
   logout() {
     localStorage.removeItem('token');
     window.location.reload();
@@ -120,7 +120,7 @@ export class NavbarComponent implements OnInit {
 
 
 
-//Change NavBar When Scroll Down 
+//Change NavBar When Scroll Down
   @HostListener('window:scroll', ['$event'])
 
   onWindowScroll() {
