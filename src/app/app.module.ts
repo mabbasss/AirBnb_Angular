@@ -33,6 +33,7 @@ import { AllhousesComponent } from './testing/allhouses/allhouses.component';
 import { DetailsComponent } from './testing/details/details.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {PasswordModule} from 'primeng/password';
+import { PersonFeedbackComponent } from './person-feedback/person-feedback.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import {PasswordModule} from 'primeng/password';
     BookingComponent,
     AllhousesComponent,
     DetailsComponent,
+    PersonFeedbackComponent,
 
   ],
   imports: [AccordionModule,

@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './Auth/auth/auth.guard';
 import { HousesComponent } from './testing/houses/houses/houses.component';
+import { PersonFeedbackComponent } from './person-feedback/person-feedback.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"home",pathMatch:"full"},
@@ -21,7 +22,7 @@ const routes: Routes = [
   {path:"Booking",component:BookingComponent},
   {path:"House/AllHouses/:City",component:AllhousesComponent},
   {path:"House/HousesBooking/:id",component:DetailsComponent},
-
+  {path:"Feedback",component:PersonFeedbackComponent},
 
 ];
 

@@ -1,19 +1,15 @@
 <!-- <div class=" container my-auto mt-5" style="margin-top: 100px !important;">
   <h1>{{ar.snapshot.params["City"]}}</h1>
   <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'320px'}"></p-gmap>
-
   <div *ngFor="let i of this.items">
     <a routerLink="/House/HousesBooking/{{i.houseId}}">
       <h2>{{i.title}}</h2>
       <h2>{{i.housePrice}}</h2>
-
       <h1>{{i.housePrice}}</h1>
     </a>
     <hr>
   </div>
 </div> -->
-
-
 <div class="container-fluid mycontainer mt-5 " style="margin-top: 150px !important;">
   <div class="row ">
     <div class="col-sm-12 col-xl-6 info   ">
@@ -36,8 +32,6 @@
             <button class=" att att5">
               More filters
             </button>
-
-
             <div class="dropdown">
               <button class="att att6 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -57,16 +51,16 @@
       </div>
 
 
+
       <img src="C:\Users\Lenovo\Desktop\AirbnbApi\AirbnbCRUD\AirbnbCRUD\Images\HouseImages\29\29-0.jpg" alt="img " srcset="">
+
 
 
     <!-- Loop to Date Of House -->
       <div *ngFor="let i of this.items">
         <a routerLink="/House/HousesBooking/{{i.houseId}}">
-
           <div class="card">
             <div class="myline">
-
             </div>
             <div class="row">
               <div class="col-sm-6  col-xl-6 col-lg-4 card-image">
@@ -154,18 +148,16 @@
 
           </div>
         </a>
-
       </div>
-
-
     </div>
     <div class="col-sm-5 col-xl-6 map  " style="height: 100vh !important;">
-
       <!-- <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'100vh'}"></p-gmap> -->
+
       <div *ngFor="let item of itemshouse" >
         <h2>{{item.houseId}}</h2>
       </div>
 
+
     </div>
   </div>
-</div> -
+</div>
