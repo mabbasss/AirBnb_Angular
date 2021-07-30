@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+/* start container */
+.mycontainer {
+  margin: auto;
+}
+.card {
+  border: none;
+}
+.att {
+  border: 1px solid gray;
+  border-radius: 45px;
+  font-size: 14px;
+  background-color: white;
+  padding: 3px 15px 3px;
+}
+.att:hover {
+  border: 1px solid black;
+}
+.anchors {
+  justify-content: space-between;
+}
+.innerdiv {
+  width: 70%;
+}
+.p-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.h-text {
+  font-size: 32px;
+}
+/* end container */
+/* start card  */
+.card-image {
+  border-radius: 25px;
+  padding: 0;
+}
+.p-card-1 {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.p-card-2 {
+  font-size: 14px;
+}
+.p-card-time {
+  font-size: 14px;
+}
+.h-card-1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+.h-card-2 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+/* lower */
+.lower-part {
+  justify-content: space-between !important;
+  width: 100%;
+}
+.mystar {
+  color: rgb(224, 89, 89);
+  font-size: 10px;
+}
+/* end lower  */
+.upper {
+  justify-content: space-between !important;
+  width: 100%;
+}
+.im {
+  border-radius: 15px;
+
+  height: 200px ;
+}
+.carousel-item {
+  height: 100% !important;
+}
+.carousel-inner {
+  height: 100% !important;
+}
+.in {
+  height: 100% !important;
+}
+/* lines */
+.myline {
+  background-color: rgb(218, 216, 216);
+  height: 1px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+.mysecondline {
+  background-color: rgb(218, 216, 216);
+  height: 1px;
+  margin-top: 15px;
+  padding: 0;
+}
+.innerline {
+  background-color: rgb(218, 216, 216);
+  width: 12%;
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+@media (max-width: 1199.98px) {
+  .map {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .innerdiv {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) {
+  .att6 {
+    display: none !important;
+  }
+}
+@media (max-width: 767.99px) {
+  .att1,
+  .att2,
+  .att3,
+  .att4,
+  .att5 {
+    display: none;
+  }
+  .innverdiv {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .card-image {
+    width: 95%;
+    margin: auto;
+  }
+}
+@media (min-width: 576px) {
+  .innerdiv {
+    width: 100%;
+  }
+  .att6 {
+    display: block;
+  }
+}

@@ -17,10 +17,10 @@ export class AllhousesComponent implements OnInit {
   options: any;
 
   overlays: any[]=[];
-  items:any[]=[]
+  items:any=[]
   ngOnInit(): void {
-      this.service.GetAllHouses().subscribe(e=>{console.log(e);this.items=e})
-      this.service.getHousesByCity(this.ar.snapshot.params["City"]).subscribe(e=>{console.log(e)},er=>console.log(er))
+      // this.service.GetAllHouses().subscribe(e=>{console.log(e);this.items=e})
+      this.service.getHousesByCity(this.ar.snapshot.params["City"]).subscribe(e=>{this.items=e; },er=>console.log(er))
       // this.services.getalluser().subscribe(e=>this.items=e)
       this.options = {
         center: {lat: 36.890257, lng: 30.707417},
