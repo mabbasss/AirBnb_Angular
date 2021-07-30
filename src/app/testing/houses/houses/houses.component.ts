@@ -40,7 +40,7 @@ export class HousesComponent implements OnInit {
     for (var i = 0; i < event.target.files.length; i++) {
       this.myFiles.push(event.target.files[i]);
   }
-  
+
   }
 
 
