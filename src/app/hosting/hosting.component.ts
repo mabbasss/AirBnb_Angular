@@ -8,6 +8,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class HostingComponent implements OnInit {
 
+  
   constructor() { }
   ngOnInit(): void {
   }
