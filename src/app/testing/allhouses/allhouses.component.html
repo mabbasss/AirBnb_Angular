@@ -52,13 +52,8 @@
 
 
 
-      <img src="C:\Users\Lenovo\Desktop\AirbnbApi\AirbnbCRUD\AirbnbCRUD\Images\HouseImages\29\29-0.jpg" alt="img " srcset="">
-
-
-
     <!-- Loop to Date Of House -->
       <div *ngFor="let i of this.items">
-        <a routerLink="/House/HousesBooking/{{i.houseId}}">
           <div class="card">
             <div class="myline">
             </div>
@@ -81,7 +76,7 @@
                   <div class="carousel-inner">
 
                     <div class="carousel-item active">
-                      <img src="'C:\Users\Lenovo\Desktop\AirbnbApi\AirbnbCRUD\AirbnbCRUD\Images\HouseImages\32\32-0.jpg'" class="d-block w-100 im" alt="...">
+                      <img src="../../../assets/images/image4.webp" class="d-block w-100 im" alt="...">
                       <div class="carousel-caption d-none d-md-block">
                       </div>
                     </div>
@@ -123,6 +118,7 @@
                     </svg>
                   </div>
                 </div>
+                <a routerLink="/House/HousesBooking/{{i.houseId}}">
 
                 <h2 class="h-card-1">{{i.title}}</h2>
                 <div class="innerline">
@@ -131,6 +127,8 @@
                 <h2 class="h-card-2">What we'll do:</h2>
                 <p class="p-card-2"> elnissimos illo quia quas architecto temporibus.</p>
                 <p class="p-card-time">10 hours.Up</p>
+        </a>
+
                 <div class="lower-part d-flex mt-auto p-2">
                   <div class="star d-flex align-items-baseline">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -147,7 +145,6 @@
             </div>
 
           </div>
-        </a>
       </div>
     </div>
     <div class="col-sm-5 col-xl-6 map  " style="height: 100vh !important;">
