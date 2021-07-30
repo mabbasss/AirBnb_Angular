@@ -1,3 +1,4 @@
+import { HousePhotoService } from './../../service/HousesPhoto/house-photo.service';
 import { UserService } from 'src/app/User/Shared/user.service';
 import { House } from './../../service/Houses/house';
 import { Component, OnInit } from '@angular/core';
@@ -12,16 +13,17 @@ declare var google:any
 })
 export class AllhousesComponent implements OnInit {
 
-  constructor(public service :HouseService , private router: Router,public services :UserService,public ar:ActivatedRoute ) { }
+  constructor(public service :HouseService , private router: Router,public services :UserService,public ar:ActivatedRoute ,public serviceimg:HousePhotoService) { }
 
   options: any;
 
   overlays: any[]=[];
   items:any=[]
+  itemshouse:any=[]
   ngOnInit(): void {
-      // this.service.GetAllHouses().subscribe(e=>{console.log(e);this.items=e})
+
       this.service.getHousesByCity(this.ar.snapshot.params["City"]).subscribe(e=>{this.items=e; },er=>console.log(er))
-      // this.services.getalluser().subscribe(e=>this.items=e)
+      this.serviceimg.GetAllHousesPhoto().subscribe(e=>{this.itemshouse.e;console.log(e)})
       this.options = {
         center: {lat: 36.890257, lng: 30.707417},
         zoom: 12
