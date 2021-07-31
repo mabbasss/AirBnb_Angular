@@ -20,11 +20,16 @@ export class AllhousesComponent implements OnInit {
   overlays: any[]=[];
   items:any=[]
   itemshouse:any=[]
+
   ngOnInit(): void {
 
       this.service.getHousesByCity(this.ar.snapshot.params["City"]).subscribe(e=>{this.items=e; },er=>console.log(er))
-      this.serviceimg.GetAllHousesPhoto().subscribe(e=>{this.itemshouse.e;console.log(e)})
-      this.options = {
+      // this.serviceimg.GetAllHousesPhoto().subscribe(e=>{this.itemshouse=e;console.log(e)})
+      for (let i = 0; i < this.items.length; i++) {
+        this.serviceimg.getHousesByid(i).subscribe(e=>{this.itemshouse=e;console.log(e)})
+      }
+
+    this.options = {
         center: {lat: 36.890257, lng: 30.707417},
         zoom: 12
     };
