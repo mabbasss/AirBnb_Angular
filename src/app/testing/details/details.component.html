@@ -1,55 +1,188 @@
-<div class="container" style="margin-top: 100px !important;">
 
-<h1>{{Houses?.houseCity}}</h1>
-<h2>{{Houses?.title}}</h2>
-<h3>{{Houses?.housePrice}}</h3>
-
-
+<div class="container" id="c11">
+  <h1>Gateaway chalet with a sunny garden in Ras Sedr</h1>
+  <div class="star-review mb-3 d-flex">
+    <div class="inner-star d-flex">
+        <i class="fas fa-star"></i>
+        <p>4.33 &nbsp; </p>
+        <p class="star-p"> (3 reviews)</p>
+        <p> &nbsp; . &nbsp; </p>
+        <p class="star-p">Abu Al Feda, Cairo Governorate, Egypt</p>
+    </div>
 </div>
-
-<div class="container">
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop22">
-    Add To Booking
-  </button>
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop22" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Booking</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-
-            <div class="form-group required">
-              <label>Start Booking </label>
-
-              <!-- <p-calendar [(ngModel)]="formModel.get('stbooking').value"  ></p-calendar> -->
-              <input  [(ngModel)]="st" type="date">
-              <!-- <p-calendar [(ngModel)]="st" dateFormat="dd.mm.yy"></p-calendar> -->
-
-            </div>
-
-            <div class="form-group required">
-              <label>End Booking</label>
-              <!-- <p-calendar [(ngModel)]="formModel.get('endbooking').value" ></p-calendar> -->
-
-              <input  [(ngModel)]="ed"  type="date" >
-              <!-- <p-calendar [(ngModel)]="ed" dateFormat="dd.mm.yy"></p-calendar> -->
-
-            </div>
-            <button type="submit" (click)=" Save()" data-bs-dismiss="modal"> Add </button>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
-        </div>
+  <div class="row">
+      <div class="col-6">
+          <img src="../../../assets/images/18be8419-6e24-4d54-bd4d-6b54065e05c6.jpg" class="img-fluid rounded float-left mr-1 ">
       </div>
+      <div class="col-6">
+          
+              <div class="row">
+                  <div class="col-6 ">
+                      <img src="../../../assets/images/2702b087-6579-4a52-91eb-865c71b69a60.jpg"
+                          class=" mb-2 rounded float-left ">
+                      <img src="../../../assets/images/3dc45352-721b-40d0-a1cf-9afcc5247b75.jpg"
+                          class=" rounded float-left ">
+                  </div>
+
+
+                  <div class="col-6 ">
+                      <img src="../../../assets/images/3dc45352-721b-40d0-a1cf-9afcc5247b75.jpg"
+                          class=" mb-2 rounded float-left ">
+                      <img src="../../../assets/images/c0bf8e39-746f-4e7c-aa3d-95cb1a1ac570.jpg"
+                          class=" rounded float-left  ">
+                  </div>
+
+              </div>
+         
+      </div>
+  </div>
+  <div class="row ">
+      <div class="col-8 ">
+          <div class=" row mt-5 d-flex justify-content-between  ">
+              <div class="col ">
+                  <h1>
+                      Entire chalet hosted by Mamdouh
+                  </h1>
+                  <h3>
+                      7 guests · 2 bedrooms · 3 beds · 2 baths
+                  </h3>
+              </div>
+              <div class="col ">
+                  <img src="../../../assets/images/38b2fa73-2b79-46a7-8811-c3b2170172e8.jpg" class="rounded" length="60"
+                      width="60">
+              </div>
+              <hr>
+          </div>
+          <div>
+
+              <div>
+                  <h5>
+                      Mamdouh is a Superhost
+                  </h5>
+                  <p>
+                      Superhosts are experienced, highly rated hosts who are committed to providing great stays
+                      for guests.
+                  </p>
+              </div>
+
+              <div>
+                  <h5>
+
+                      Great check-in experience
+                  </h5>
+                  <p>
+                      100% of recent guests gave the check-in process a 5-star rating.
+                  </p>
+              </div>
+
+              <div>
+                  <h5>
+                      Pool
+                  </h5>
+                  <p>
+                      Guests often search for this popular amenity
+                  </p>
+              </div>
+              <hr>
+
+              <div>
+                  <h3>
+                      All about Mamdouh’s place
+                  </h3>
+
+                  <p>
+                      A lovely chalet situated within Golden Beach 2 in Ras Sedr. The compound has communal
+                      swimming pools, entertainments and aqua park for kids; all on a walking distance from
+                      stunning beachfront. The latter is one of the top ones in the area. Has private security,
+                      all essential services are available within, full of gardens and common social spaces, yet
+                      most importantly has a lovely beach. The chalet is an ideal getaway for mind-clearing,
+                      family gathering, or simply to enjoy the sun and the beach.
+                  </p>
+              </div>
+
+              <hr>
+
+              <div class="row">
+                  <h3>
+                      Places for sleeping
+                  </h3>
+                  <div class="card border-secondary mb-3 col-6"
+                      style="max-width: 14rem; max-height: 10rem; border-radius: 15px;">
+
+                      <div class="card-body ">
+                          <h5 class="card-title"> <i class="fas fa-bed"></i></h5>
+                          <p class="card-text"> Bedroom 1 <br> 1 double bed</p>
+                      </div>
+                  </div>
+                  <div class="card border-secondary mb-3 mx-3 col-6"
+                      style="max-width: 14rem; max-height: 10rem; border-radius: 15px;">
+
+                      <div class="card-body ">
+                          <h5 class="card-title"> <i class="fas fa-bed"></i> <i class="fas fa-bed"></i></h5>
+                          <p class="card-text"> Bedroom 2 <br> 2 single bed</p>
+                      </div>
+                  </div>
+              </div>
+
+              <hr>
+
+              <div class="row">
+                  <h3>
+                      What this place offers
+                  </h3>
+                  <div class="col-6">
+                      <i class="fas fa-wifi p-1 mt-1 mx-3"></i> WIFI
+                      <br>
+
+                      <i class="fas fa-swimming-pool p-1 mt-2 mx-3"></i> Swimming Pool
+                      <br>
+
+                      <i class="fas fa-tv  p-1 mt-2 mx-3"></i> TV
+                  </div>
+                  <div class="col-6">
+
+                      <i class="fas fa-utensils p-1 mt-2 mx-3"></i> Kitchen
+                      <br>
+
+                      <i class="fas fa-paw p-1 mt-2 mx-3"></i> Pets Allowed
+                      <br>
+                      <i class="fas fa-parking p-1 mt-2 mx-3"></i> Parking
+                  </div>
+                  <button type="button" class="btn btn-light mt-4"
+                      style="border-color: black; border-style: solid; width: 270px; ">Show All 44
+                      Amenities</button>
+              </div>
+
+              <hr>
+
+
+
+          </div>
+      </div>
+      <div class="col-4 mydiv"> 
+        <form class="myform d-flex flex-column">
+            <div class="price d-flex justify-content-between">
+                <p>$30 / night</p>
+                <p>4.33(3 reviews)</p>
+            </div>
+            <div class=" check-container ">
+                <div class="row-cols-2 row">
+                <div class="col mycol mycol-l">
+                    <p class="check">CHECK-IN</p>
+                    <p class="check-l">Add date</p>
+                    </div>
+                <div class="col mycol mycol-r">
+                    <p class="check">CHECKOUT</p>
+                    <p class="check-l">Add date</p>
+                    </div>
+                <div class="col-12 text-center">
+                    <p class="guests">GUESTS</p>
+                </div>
+                </div>
+            </div>
+            <button type="submit" class="btn mt-3 mybtn">Check availability</button>
+        </form>
     </div>
   </div>
 </div>
-
-
 
