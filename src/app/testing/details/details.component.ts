@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Booking } from 'src/app/service/Booking/booking';
 import { FormBuilder, Validators } from '@angular/forms';
 import { UserService } from 'src/app/User/Shared/user.service';
+import { HousePhotoService } from 'src/app/service/HousesPhoto/house-photo.service';
 
 @Component({
   selector: 'app-details',
@@ -14,13 +15,15 @@ import { UserService } from 'src/app/User/Shared/user.service';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor(public servic:HouseService ,public ar:ActivatedRoute,private fb: FormBuilder,public servicbooking:BookingService , public serviceUser:UserService ) { }
+  constructor(public servic:HouseService ,public ar:ActivatedRoute,private fb: FormBuilder,public servicbooking:BookingService , public serviceUser:UserService,public serviceimg:HousePhotoService ) { }
   Houses:any
   ids:any
+  itemshouse:any=[] ||undefined
+
   ngOnInit(): void {
     this.servic.getHousesById(this.ar.snapshot.params["id"]).subscribe(e=>{this.Houses=e;console.log(e)})
     this.serviceUser.getUserProfile().subscribe(e=>{this.ids=e;console.log(e)},er=>console.log(er));
-
+    this.serviceimg.getHousesByid(this.ar.snapshot.params["id"]).subscribe(e=>{this.itemshouse=e;console.log(e)})
   }
 
   booking:Booking=new Booking()
