@@ -25,7 +25,7 @@ export class AllhousesComponent implements OnInit {
 
       this.service.getHousesByCity(this.ar.snapshot.params["City"]).subscribe(e=>{this.items=e; },er=>console.log(er))
       this.serviceimg.GetAllHousesPhoto().subscribe(e=>{this.itemshouse=e;console.log(e)})
-      // this.serviceimg.getHousesByid(70).subscribe(e=>{this.itemshouse=e;console.log(e)})
+      // this.serviceimg.getHousesByid({{i.houseid}}).subscribe(e=>{this.itemshouse=e;console.log(e)})
 
 
     this.options = {

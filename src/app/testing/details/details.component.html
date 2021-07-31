@@ -160,7 +160,7 @@
           </div>
       </div>
       <div class="col-4 mydiv">
-        <form class="myform d-flex flex-column">
+        <div class="myform d-flex flex-column">
             <div class="price d-flex justify-content-between">
                 <p>$30 / night</p>
                 <p>4.33(3 reviews)</p>
@@ -169,11 +169,11 @@
                 <div class="row-cols-2 row">
                 <div class="col mycol mycol-l">
                     <p class="check">CHECK-IN</p>
-                    <p class="check-l">Add date</p>
+                    <p class="check-l">  <input  [(ngModel)]="st" type="date"> </p>
                     </div>
                 <div class="col mycol mycol-r">
                     <p class="check">CHECKOUT</p>
-                    <p class="check-l">Add date</p>
+                    <p class="check-l">  <input  [(ngModel)]="ed" class="check-l" type="date" ></p>
                     </div>
                 <div class="col-12 text-center">
                     <p class="guests">GUESTS</p>
@@ -181,7 +181,7 @@
                 </div>
             </div>
             <button type="submit" class="btn mt-3 mybtn">Check availability</button>
-        </form>
+        </div>
     </div>
   </div>
 </div>
