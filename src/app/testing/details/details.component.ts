@@ -15,7 +15,7 @@ import { HousePhotoService } from 'src/app/service/HousesPhoto/house-photo.servi
 })
 export class DetailsComponent implements OnInit {
 
-  constructor(public servic:HouseService ,public ar:ActivatedRoute,private fb: FormBuilder,public servicbooking:BookingService , public serviceUser:UserService,public serviceimg:HousePhotoService ) { }
+  constructor( public servic:HouseService ,public ar:ActivatedRoute,private fb: FormBuilder,public servicbooking:BookingService , public serviceUser:UserService,public serviceimg:HousePhotoService ) { }
   Houses:any
   ids:any
   itemshouse:any=[] ||undefined
@@ -27,24 +27,22 @@ export class DetailsComponent implements OnInit {
   }
 
   booking:Booking=new Booking()
-  ahmed:any
-  st:any
-  ed:any
-  myDate = new Date();
+
+  st?:Date
+  ed?:Date
+  myDate =new Date();
   Save(){
 
   const formData = new FormData();
-
   this.booking={
     PersonId:this.ids.personId,
     HouseId:this.ar.snapshot.params["id"],
     StartBookingDate:this.st,
     EndBookingDate:this.ed,
     CreatingBookingDate:this.myDate
-
   }
-  console.log(this.booking)
-  this.servicbooking.addBooking(this.booking).subscribe(e=>console.log(e))
+this.servicbooking.addBooking(this.booking).subscribe(e=>console.log(e))
+
 
 
 

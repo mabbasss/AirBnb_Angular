@@ -75,7 +75,6 @@ export class NavbarComponent implements OnInit {
     this.formData.append('PersonLastName',this.formModel.controls.PersonLastName.value);
     this.formData.append('PersonEmailName',this.formModel.controls.PersonEmailName.value);
     this.formData.append('PersonPhone', this.formModel.controls.PersonPhone.value);
-
     this.formData.append('PersonPassword', this.formModel.controls.PersonPassword.value);
 
     this.serves.register(this.formData).subscribe((res: any) => {
@@ -99,6 +98,7 @@ export class NavbarComponent implements OnInit {
         this.toastr.success("welcome")
 
         window.location.reload();
+        
         localStorage.setItem('token', res.token);
       },
       err => {

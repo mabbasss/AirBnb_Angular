@@ -2,7 +2,7 @@ import { UserService } from 'src/app/User/Shared/user.service';
 import { HouseService } from './../../../service/Houses/house.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-houses',
@@ -19,7 +19,7 @@ export class HousesComponent implements OnInit {
     number:[''],
     Price:[''],
     Title:[''],
-    HousePhotoFiles:[''],
+    HousePhotoFiles:['',[Validators.minLength(5),Validators.maxLength(5)]],
     PersonId:['']
   })
 
@@ -36,10 +36,23 @@ export class HousesComponent implements OnInit {
 
   myFiles:string [] = [];
   onFileChange(event: any){
+  try{
+    if(event.target.files.length==5){
+      for (var i = 0; i < 5 ; i++) {
+        this.myFiles.push(event.target.files[i]);
+      }
+    }else{
 
-    for (var i = 0; i < event.target.files.length; i++) {
-      this.myFiles.push(event.target.files[i]);
+       alert(" u should put 5 images")
+      window.location.reload();
+      this.formModeule.reset();
+
+    }
+
+  }catch(e){
+    return  alert(e)
   }
+
 
   }
 
