@@ -36,11 +36,11 @@
 
                   <div class="form-group mb-3">
                     <label for="fname"> images </label>
-                    <input type="file"  placeholder="HousePrice" formControlName="HousePhotoFiles" (change)="onFileChange($event)" multiple  >
+                    <input type="file" #img placeholder="HousePrice"  accept="image/png, image/jpg, image/jpeg"  formControlName="HousePhotoFiles" (change)="onFileChange($event)" multiple  minlength="5" maxlength="5" required >
                   </div>
 
                   <div class="form-group mb-0 d-flex justify-content-between">
-                      <button class="btn btn-dark btn-block" type="submit"  > Add </button>
+                      <button class="btn btn-dark btn-block" type="submit"   > Add </button>
                   </div>
                 </form>
              </div>

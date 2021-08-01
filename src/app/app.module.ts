@@ -35,6 +35,7 @@ import { DetailsComponent } from './testing/details/details.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {PasswordModule} from 'primeng/password';
 import { PersonFeedbackComponent } from './person-feedback/person-feedback.component';
+import {CarouselModule as Carousel} from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,7 @@ import { PersonFeedbackComponent } from './person-feedback/person-feedback.compo
     GMapModule,
     ButtonModule,
     PasswordModule,
-    CompareValidatorModule
+    CompareValidatorModule,Carousel
 
   ],
   providers: [MessageService],

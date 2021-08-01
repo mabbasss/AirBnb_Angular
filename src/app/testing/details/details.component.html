@@ -16,19 +16,20 @@
       </div>
       <div class="col-6">
 
+
               <div class="row">
                   <div class="col-6 ">
                       <img src="http://localhost:42138/{{itemshouse[1]?.housePhotos}}"
-                          class=" mb-2 rounded float-left ">
-                      <img  src="http://localhost:42138/{{itemshouse[2].housePhotos}}"
+                          class=" mb-2 rounded float-left">
+                      <img  src="http://localhost:42138/{{itemshouse[2]?.housePhotos}}"
                           class=" rounded float-left ">
                   </div>
 
 
                   <div class="col-6 ">
-                      <img src="http://localhost:42138/{{itemshouse[3].housePhotos}}"
-                          class=" mb-2 rounded float-left ">
-                      <img src="http://localhost:42138/{{itemshouse[4].housePhotos}}"
+                      <img src="http://localhost:42138/{{itemshouse[3]?.housePhotos}}"
+                          class=" mb-2 rounded float-left">
+                      <img src="http://localhost:42138/{{itemshouse[4]?.housePhotos}}"
                           class=" rounded float-left  ">
                   </div>
 
@@ -162,7 +163,7 @@
       <div class="col-4 mydiv">
         <div class="myform d-flex flex-column">
             <div class="price d-flex justify-content-between">
-                <p>$30 / night</p>
+                <p>{{Houses?.housePrice}} / night</p>
                 <p>4.33(3 reviews)</p>
             </div>
             <div class=" check-container ">
@@ -180,7 +181,7 @@
                 </div>
                 </div>
             </div>
-            <button type="submit" class="btn mt-3 mybtn">Check availability</button>
+            <button type="submit" (click)=" Save()"  class="btn mt-3 mybtn">Check availability</button>
         </div>
     </div>
   </div>
